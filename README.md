@@ -1,4 +1,4 @@
-# Introductory Course on Systemas Biology: from molecular networks to multicellular systemas.
+# Introductory Course on Systmas Biology: from molecular networks to multicellular systemas.
 ![Banner](https://github.com/migp11/systems_biology_course/blob/main/img/banner.jpg)
 
 
