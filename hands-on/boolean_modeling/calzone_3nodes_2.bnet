@@ -1,0 +1,7 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+CASP3, ! MPT & ! NFkB
+MPT,   MPT  & ! NFkB
+NFkB,  NFkB & ! CASP3 & ! MPT

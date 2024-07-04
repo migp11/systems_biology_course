@@ -1,0 +1,87 @@
+# model in BoolNet format
+# the header targets, factors is mandatory to be importable in the R package BoolNet
+
+targets, factors
+AKT,             !mTORC2&PDK1 | mTORC2
+ASK1,            !AKT
+Antisurvival_b1, !FOXO&!Antisurvival_b1&Caspase37_b1 | !FOXO&Antisurvival_b1&!Antisurvival_b2&Caspase37_b1 | !FOXO&Antisurvival_b1&Antisurvival_b2 | FOXO
+Antisurvival_b2, !FOXO&Antisurvival_b1&!Antisurvival_b2&Caspase37_b1&Caspase37_b2 | !FOXO&Antisurvival_b1&Antisurvival_b2&!Antisurvival_b3&Caspase37_b1&Caspase37_b2 | !FOXO&Antisurvival_b1&Antisurvival_b2&Antisurvival_b3 | FOXO&Antisurvival_b1&!Antisurvival_b2&Caspase37_b1 | FOXO&Antisurvival_b1&Antisurvival_b2&!Antisurvival_b3&Caspase37_b1 | FOXO&Antisurvival_b1&Antisurvival_b2&Antisurvival_b3
+Antisurvival_b3, FOXO&Antisurvival_b1&Antisurvival_b2&Caspase37_b1&Caspase37_b2
+Axin,            !LRP
+BAD,             !AKT&!RSK
+BAX,             p53
+BCL2,            !BAD
+CCND1_b1,        !RSK&!TCF&CCND1_b1&CCND1_b2 | !RSK&TCF | RSK
+CCND1_b2,        RSK&TCF&CCND1_b1
+CFLAR,           AKT&!ITCH
+CK1,             !LRP
+Caspase37_b1,    !Caspase8&!Caspase9&Caspase37_b1&Caspase37_b2 | !Caspase8&Caspase9 | Caspase8
+Caspase37_b2,    Caspase8&Caspase9&Caspase37_b1
+Caspase8,        !CFLAR
+Caspase9,        CytochromeC
+CytochromeC,     !BCL2&BAX
+DKK1,            DKK1gene
+DKK1gene,        !cMYC&TCF
+DUSP1,           !p38alpha&MSK | p38alpha
+DUSP6,           !ERK&mTORC1 | ERK
+Dvl,             Fz
+ERK,             !MEK&!DUSP6 | MEK
+Egr1,            !TCF
+FOXO,            !AKT&!NLK
+Fz,              !SFRP1
+GAB,             GRB2&!ERK
+GRAP2,           !p38alpha
+GRB2,            SHC1
+GSK3,            !ERK&!p38alpha&!AKT&!S6K&!LRP&!RSK&!Dvl
+IKKA,            AKT
+IKKB,            TAK1&!p53
+IRS1,            !ERK&!IKKB&!S6K
+ITCH,            JNK
+JNK,             !DUSP1&!MKK4&MKK7 | !DUSP1&MKK4
+LEF,             betacatenin
+LRP,             !ERK&!p38alpha&!JNK&!DKK1&Fz | !ERK&!p38alpha&JNK&!DKK1 | !ERK&p38alpha&!DKK1 | ERK&!DKK1
+MAP3K8,          IKKB
+MDM2,            !AKT&MDM2gene&!S6K | AKT&!S6K
+MDM2gene,        !p53&NFkB | p53
+MEK,             !Raf&!ERK | !Raf&ERK&MAP3K8 | Raf
+MEKK4,           Rac
+MKK3,            !TAK1&ASK1 | TAK1
+MKK4,            !TAK1&!MEKK4&!MLK3&GRAP2 | !TAK1&!MEKK4&MLK3 | !TAK1&MEKK4 | TAK1
+MKK7,            !TAK1&GRAP2 | TAK1
+MLK3,            Rac
+MMP,             LEF
+MSK,             !ERK&p38alpha | ERK
+NFkB,            !IKKB&!IKKA&MSK | !IKKB&IKKA | IKKB
+NLK,             TAK1
+PDK1,            !PTEN&PI3K
+PI3K,            !Ras&!GAB&IRS1 | !Ras&GAB | Ras
+PTEN,            PTENgene&!GSK3
+PTENgene,        Egr1
+Prosurvival_b1,  !Prosurvival_b1&!cMYC&CCND1_b1 | !Prosurvival_b1&cMYC | Prosurvival_b1&!Prosurvival_b2&!cMYC&CCND1_b1 | Prosurvival_b1&!Prosurvival_b2&cMYC | Prosurvival_b1&Prosurvival_b2
+Prosurvival_b2,  Prosurvival_b1&!Prosurvival_b2&!cMYC&CCND1_b1&CCND1_b2 | Prosurvival_b1&!Prosurvival_b2&cMYC&CCND1_b1 | Prosurvival_b1&Prosurvival_b2&!Prosurvival_b3&!cMYC&CCND1_b1&CCND1_b2 | Prosurvival_b1&Prosurvival_b2&!Prosurvival_b3&cMYC&CCND1_b1 | Prosurvival_b1&Prosurvival_b2&Prosurvival_b3
+Prosurvival_b3,  Prosurvival_b1&Prosurvival_b2&cMYC&CCND1_b1&CCND1_b2
+RSK,             ERK&PDK1
+RTPK,            !MEK&!p38alpha&!RTPKgene&MMP | !MEK&!p38alpha&RTPKgene
+RTPKgene,        FOXO
+Rac,             !mTORC2&Dvl | mTORC2
+Raf,             !Ras&!ERK&!AKT&!Rheb | Ras
+Ras,             !SOS&SHP2 | SOS
+Rheb,            !TSC
+S6K,             !mTORC1&PDK1 | mTORC1
+SFRP1,           SFRP1gene
+SFRP1gene,       !cMYC
+SHC1,            !RTPK&!PTEN | RTPK
+SHP2,            GAB
+SOS,             !GRB2&!ERK | GRB2
+TAB,             !p38alpha
+TAK1,            TAB
+TCF,             !betacatenin&!NLK | betacatenin
+TSC,             !ERK&!IKKB&!AKT&GSK3&!RSK
+betaTrCP,        Axin&GSK3&CK1
+betacatenin,     !IKKA&!betaTrCP | IKKA
+cMYC,            TCF
+mTORC1,          !pras40&!Rheb&RSK | !pras40&Rheb
+mTORC2,          TSC&!S6K
+p38alpha,        !MKK3&!DUSP1&MKK4 | MKK3&!DUSP1
+p53,             p38alpha&!MDM2
+pras40,          !AKT
