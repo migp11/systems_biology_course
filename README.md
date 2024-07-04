@@ -1,5 +1,5 @@
 # Introductory Course on Systemas Biology: from molecular networks to multicellular systemas.
-[![Banner](https://github.com/migp11/systems_biology_course/blob/main/img/banner.jpg)]
+![Banner](https://github.com/migp11/systems_biology_course/blob/main/img/banner.jpg)
 
 
 Profesor: Dr. Miguel Ponce de León (Barcelona Supercomputing Center)
