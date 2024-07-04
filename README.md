@@ -2,7 +2,7 @@
 ![Banner](https://github.com/migp11/systems_biology_course/blob/main/img/banner.jpg)
 
 
-Profesor: Dr. Miguel Ponce de León (Barcelona Supercomputing Center)
+Author: Dr. Miguel Ponce de León
 
 Day 1
 - Introduction to Systems Biology
